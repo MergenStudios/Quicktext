@@ -1,4 +1,4 @@
-import sys, pyautogui
+import sys
 
 from PySide6.QtWidgets import QMainWindow, QApplication
 from PySide6.QtUiTools import QUiLoader
@@ -30,7 +30,7 @@ class MainWindow(QMainWindow):
     def mouseDoubleClickEvent(self, event):
         self.close()
 
-if __name__ == "__main__":
+def run():
     app = QApplication(sys.argv)
     window = MainWindow()
     
@@ -41,3 +41,7 @@ if __name__ == "__main__":
     window.show()
 
     app.exec()
+
+
+if __name__ == "__main__":
+    run()
